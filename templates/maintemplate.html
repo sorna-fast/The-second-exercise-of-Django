@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>
+            باغ فردوس | {% block title %}{% endblock title %}
+        </title>
+        {% comment %} <link rel="stylesheet" href={% static "css/style.css" %}> {% endcomment %}
+        <style>
+          .menu__bar{
+            background-color: rgb(44, 7, 67);
+            height: 80px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            direction: ltr;
+        }
+        
+        footer,header{
+            background-color: rgb(33, 205, 248);
+            width: 100%;
+        }
+        
+        .logo{
+            color: white;
+            font-size: 30px;
+        }
+        
+        .logo span{
+            color: palevioletred;
+        }
+        
+        .menu__bar ul{
+            list-style: none;
+            display: flex;
+        }
+        
+        .menu__bar ul li{
+            padding: 10px 30px;
+            position: relative;
+        }
+        
+        .menu__bar ul li a{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 20px;
+            transition: all 0.3s;
+        }
+        
+        .menu__bar ul li a:hover{
+            color: rgb(242, 44, 110);
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .dropdown__menu{
+            display: none;
+            position: absolute;
+            right: 0px; /* برای راست‌چین کردن منوی کشویی */
+            top: 100%;
+            background-color: rgb(15, 13, 15);
+        }
+        
+        .menu__bar ul li:hover .dropdown__menu{
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 100%;
+            background-color: rgb(15, 13, 15);
+        }
+        
+        .menu__bar ul li:hover .dropdown__menu ul{
+            display: block;
+            margin: 10px;
+        }
+        
+        .menu__bar ul li:hover .dropdown__menu ul li{
+            width: auto; /* تنظیم عرض مناسب برای آیتم‌ها */
+            padding: 10px;
+        }
+        
+        .fas{
+            float: right;
+            margin-right: 10px;
+            padding-top: 3px;
+        }
+        
+        </style>
+    </head>
+    <body>
+        
+        {% include "partials/header.html" %}
+
+        <hr>
+
+        {% include "partials/navbar.html" %}
+
+            <p style="font: size 60px;text-align: right;">
+                به باغ فردوس خوش آمدید
+            </p>
+        
+        <div>
+            <img src="{{media_url}}images/garden/gardenferdos.jpg">
+        </div>
+        <hr>
+        
+        {% block content %}{% endblock  %}
+        
+        <hr>
+
+        {% include "partials/footer.html" %}
+    </body>
+</html>
+

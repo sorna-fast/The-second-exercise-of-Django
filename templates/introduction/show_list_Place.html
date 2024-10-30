@@ -1,0 +1,35 @@
+{% extends "maintemplate.html" %}
+{% block content %}
+
+
+<h1>روز های بازدید</h1>
+
+    <ul>
+    {% for place in Places %}
+        
+        <li>
+            <h3>روز و ساعت  بازدید <strong>{{place.place_title}}</strong>:{{place.Time_Visit}}</h3>
+            
+           
+
+        <td>{{place.place_title}}</td>
+        <td>{{place.Time_Visit}}</td>
+        <td>{{place.Description}}</td>
+        <td>{{place.Rules}}</td>
+        <td><img src="{{media_url}}{{place.Origina_photo}}" alt="{{place.place_title}}"></td>
+
+
+        </tr>
+
+    {% endfor %}
+    </ul>
+    <ul>
+    {% for Ticket_Price in Ticket_Prices %}
+        <li>بهای بلیط {{Ticket_Price.place_visit}}</li>برای بازید کننده  
+        {{Ticket_Price.group_visit}}:{{Ticket_Price.Ticket_price}}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+
+

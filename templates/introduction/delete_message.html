@@ -1,0 +1,11 @@
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <h3>ایا میخواهید پست
+            <span style="color:red;">
+            {{object.title_message}}
+            </span>
+            را حذف کنید؟</h3>
+        <input type="submit" value="بله">
+    </form>
+{% endblock content %}

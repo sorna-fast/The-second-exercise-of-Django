@@ -1,0 +1,22 @@
+{% extends "maintemplate.html" %}
+
+{% block content %}
+<h1>بخش های باغ فردوس</h1>
+{% for place in Places %}
+      
+    <div class="row">
+        <img src="{{media_url}}{{place.Origina_photo}}" class="img_300x200" >
+    
+        <div class = "col-sm-6 col-md-4 col-lg-4">
+            <h3>{{ place.place_title }}</h3>
+            <p class="description">{{ place.Description }}</p>
+            <p><a href="{% url "introduction:show_part_detail" id=place.id %}" class="btn btn-primary btn-block" role="button">مشاهده جزِیات</a></p>
+
+        </div>
+    </div>
+    
+
+
+{% endfor %}
+
+{% endblock content %}

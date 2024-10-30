@@ -1,0 +1,30 @@
+<div class="menu__bar">
+    <h1 class="logo">باغ <span>فردوس</span></h1>
+    <ul>
+      <li><a>صحفه اصلی</a></li>
+      <li><a>معرفی باغ</a>
+      <div class="dropdown__menu">
+        <ul>
+          <li><a href="{% url "introduction:garden_history" %}"><i>تاریخچه</i></a></li>
+          <li><a href="{% url "introduction:show_garden_part" %}"><i>بخش های باغ</i></a></li>
+          <li><a href="{% url "introduction:download_path_garden" %}" ><i>مسیر بازدید</i></a></li>
+          <li><a href="{% url "introduction:show_Place" %}" ><i>برنامه و قوانین باغ</i></a></li>
+        </ul>
+      </div>
+      </li>
+      <li><a>گالری</a></li>
+      <li><a>اموزش و پژوهش</a>
+        <div class="dropdown__menu">
+          <ul>
+            <li><a href="{% url "blog:blog_show" %}"><i>مقالات</i></a></li>
+            <li><a href="#"><i>کارگاه ها</i></a></li>
+          </ul>
+        </div> 
+      </li>
+      <li><a href="{% url "introduction:create_message" %}">تماس با ما</a></li>
+    </ul>
+    
+    </div>
+    <p style="font: size 60px;text-align: right;">
+        به باغ فردوس خوش آمدید
+    </p>

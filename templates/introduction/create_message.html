@@ -1,0 +1,10 @@
+{% extends "maintemplate.html" %}
+{% block content %}
+    <h1>فرم ارسال پیام</h1>
+    <form method="post",enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="ارسال پیام">
+    </form>
+{% endblock content %}
+
