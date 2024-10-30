@@ -81,10 +81,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
         'NAME':'garden',
-        'USER':'root',
-        'PASSWORD':'26182618m',
-        'HOST':'localhost',
-        'PORT':'3306'
+        'USER':'',
+        'PASSWORD':'',
+        'HOST':'',
+        'PORT':''
     }
 }
 
