@@ -56,4 +56,6 @@ This project is part of a Django learning exercise, where the goal is to impleme
 
 ---
 
-This version includes a balanced amount of explanation for both English and Persian speakers. Let me know if you'd like more details or modifications!
+
+### 📧 ارتباط با من | Contact
+برای هرگونه سوال یا پیشنهاد، می‌توانید از طریق ایمیل با من تماس بگیرید: masudpythongit@gmail.com
